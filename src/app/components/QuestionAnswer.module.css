@@ -1,0 +1,45 @@
+.QA_container {
+    color: white;
+    background-color: #2d2d2d;
+    text-align: left;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    max-height: 0;
+    overflow: hidden;
+    visibility: collapse;
+    padding: 0px 1.5rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.question_container:hover{
+    cursor: pointer;
+}
+
+.question_container::after {
+    position: absolute;
+    content: "+";
+    font-size: 2rem;
+    top: 20%;
+    left: 90%;
+}
+
+.question_container.clicked::after {
+    rotate: 45deg;
+}
+
+.question_container {
+    position: relative;
+    border-bottom: 1px solid #000;
+    padding: 0.25rem 1.5rem;
+}
+
+.answer_container {
+    max-height: 30rem;
+    visibility: visible;
+    padding: 0.25rem 1.5rem;
+    transition: all 0.25s ease-in-out;
+}

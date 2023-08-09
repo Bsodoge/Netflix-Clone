@@ -1,0 +1,50 @@
+.card {
+    position: relative;
+    padding: 1.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    margin: 25px;
+    background-image: radial-gradient(ellipse at top,#d00b1a 10%, #0e1b4e 70%);
+}
+
+.card::before {
+    position: absolute;
+    display: block;
+    content: " ";
+    top: -40px;
+    left: 10px;
+    background-image: url("../assets/popcorn.svg");
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0px 0px 30px #fff);
+}
+
+.card a {
+    position: relative;
+    color: #448ef4;
+    font-weight: 600
+}
+
+.card h2 {
+    font-size: 1.25rem;
+}
+
+.card a::after {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: " ";
+    box-sizing: content-box;
+    border-color: #448ef4;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    top: 5px;
+    left: 100px;
+    rotate: 45deg;
+}
+
+.text_container {
+    margin: 10px;
+}
