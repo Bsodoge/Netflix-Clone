@@ -9,6 +9,10 @@
   font-weight: 450;
 }
 
+.signup_container a{
+  text-decoration: none;
+}
+
 .signup_container button {
   all: unset;
   background-color: #e50914;
