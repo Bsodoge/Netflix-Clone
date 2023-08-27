@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Card from './components/Card'
 import Section from './components/Section'
 import QuestionAnswer from './components/QuestionAnswer'
-import Footer from './components/Footer'
 import SignUp from './components/SignUp'
 
 export default function Home() {
@@ -34,7 +33,6 @@ export default function Home() {
         </ul>
       </div>
       <SignUp></SignUp>
-      <Footer></Footer>
     </main>
   )
 }
