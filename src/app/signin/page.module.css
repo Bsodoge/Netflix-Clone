@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.header > a {
+    text-decoration: none;
+}
+
+.button {
+    all: unset;
+    background-color: #e50914;
+    border-radius: 5px;
+    padding: 0.45rem 1rem;
+    color: white;
+}
