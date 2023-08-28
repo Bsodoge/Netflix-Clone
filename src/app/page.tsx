@@ -1,11 +1,16 @@
+'use client'
 import styles from './page.module.css'
 import Header from './components/Header'
 import Card from './components/Card'
 import Section from './components/Section'
 import QuestionAnswer from './components/QuestionAnswer'
 import SignUp from './components/SignUp'
+import WatchNow from './components/WatchNow'
+import { useSession } from 'next-auth/react'
+
 
 export default function Home() {
+  const { data: session } = useSession();
   return (
     <main className={styles.main}>
       <div className={styles.bg_image}>
@@ -13,7 +18,9 @@ export default function Home() {
         <div className={styles.hero}>
           <h1>Unlimited films, TV programmes and more</h1>
           <p>Watch anytime. Cancel at anytime.</p>
-          <SignUp></SignUp>
+          {
+            session ? <WatchNow></WatchNow> : <SignUp></SignUp>
+          }
         </div>
       </div>
       <Card></Card>
@@ -32,7 +39,9 @@ export default function Home() {
           <QuestionAnswer question='bruh' answer='moment'></QuestionAnswer>
         </ul>
       </div>
-      <SignUp></SignUp>
+      {
+        session ? <WatchNow></WatchNow> : <SignUp></SignUp>
+      }
     </main>
   )
 }
