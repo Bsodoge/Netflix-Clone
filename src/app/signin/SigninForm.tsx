@@ -8,7 +8,7 @@ export default function SigninForm(){
     let [email, setEmail] = useState<string>('');
     let [password, setPassword] = useState<string>('');
     const handleLogin = () => {
-        signIn('credentials', {email, password, redirect: true, callbackUrl: '/'});
+        signIn('credentials', {email, password, redirect: true, callbackUrl: '/browse'});
     }
     return(
         <div className={styles.signin_form}>
