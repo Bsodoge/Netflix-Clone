@@ -15,7 +15,7 @@ export default function SigninForm(){
     const handleLogin = () => {
         try {
             createUserWithEmailAndPassword(auth, email, password);
-            route.push('/');
+            route.push('/browse');
         } catch (error) {
             console.log(error)
         }
