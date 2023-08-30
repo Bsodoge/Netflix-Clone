@@ -1,0 +1,15 @@
+.current_movie_container{
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0px 0px 300px 1px #000;
+}
+
+.text_container{
+    padding: 5rem 1rem;
+}
+
+.text_container p {
+    font-size: 0.85rem;
+}
