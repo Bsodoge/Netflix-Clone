@@ -13,9 +13,13 @@
     background-color: #e50914;
     border-radius: 5px;
     padding: 0.45rem 1rem;
-    color: white;
+    color: #fff;
+}
+
+.button:hover{
+    cursor: pointer;
 }
 
 .signedin{
-    color: white;
+    color: #fff;
 }
