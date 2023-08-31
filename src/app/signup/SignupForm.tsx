@@ -30,11 +30,11 @@ export default function SigninForm(){
                 </div>
                 <div className={styles.input_container}>
                     <label htmlFor="password">Enter password</label>
-                    <input type="password"  onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password"  onChange={(e) => setPassword(e.target.value)} min={6}/>
                 </div>
                 <div className={styles.input_container}>
                     <label htmlFor="password">Enter password again</label>
-                    <input type="password"  onChange={(e) => setAgainPassword(e.target.value)}/>
+                    <input type="password"  onChange={(e) => setAgainPassword(e.target.value)} min={6}/>
                 </div>
                 <button disabled={!email || !password || !againPassword || againPassword !== password} className={styles.button} onClick={() => handleLogin()}>Sign In</button>
             </form>
