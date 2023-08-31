@@ -3,6 +3,7 @@
 import styles from "./CurrentMovie.module.css"
 import { IMovieDetails } from "../interfaces/IMovieDetails"
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 
 interface props {
     currentMovie : IMovieDetails
@@ -19,6 +20,7 @@ export default function CurrentMovie({currentMovie} : props){
             <div className={styles.text_container}>
                 <h2>{currentMovie?.title}</h2>
                 <p>{currentMovie?.overview}</p>
+                <Link href={`browse/${currentMovie?.id}`}><button className={styles.watch_now}>Watch Now</button></Link>
             </div>
         </div>
     )

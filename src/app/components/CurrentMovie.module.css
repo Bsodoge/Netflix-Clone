@@ -13,3 +13,9 @@
 .text_container p {
     font-size: 0.85rem;
 }
+
+.watch_now{
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
