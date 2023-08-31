@@ -17,14 +17,20 @@ export default function Header() {
             console.log(error);
         }
     }
-    return(
+    return (
         pathName !== '/' ?
-        <header className={styles.header}>
-            <Link href={""}><Image src={Betterflix} alt="Netflix Logo" width={150} height={50}></Image></Link>
-            {
-                session ? <button className={styles.button} onClick={() => handleLogout()}>Log out</button> :
-                <Link href={"/signin"}><button className={styles.button}>Sign in</button></Link>
-            }
-        </header> : <></>
+            <header className={styles.header}>
+                <Link href={"/"}><Image src={Betterflix} alt="Netflix Logo" width={150} height={50}></Image></Link>
+                <div className={styles.button_container}>
+                    {
+                        session ? <button className={styles.button} onClick={() => handleLogout()}>Log out</button> :
+                            <Link href={"/signin"}><button className={styles.button}>Sign in</button></Link>
+                    }
+                    {
+                        session ? <Link href={"/mylist"}><button className={styles.button}>My List</button></Link> :
+                            <></>
+                    }
+                </div>
+            </header> : <></>
     )
 }
