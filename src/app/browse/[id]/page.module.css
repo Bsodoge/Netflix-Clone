@@ -1,0 +1,95 @@
+.main{
+    color: #fff;
+}
+
+.background_image{
+    position: relative;
+    padding: 7rem 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 1000px -150px #000;
+}
+
+.movie_poster{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 125px;
+    border-radius: 0.25rem;
+}
+
+.movie_title{
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.date{
+    color: #616161;
+}
+
+.rating_play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 10px;
+}
+
+.line{
+    height: 50px;
+    padding: 1px;
+    background-color: #616161;
+}
+
+.circle{
+    padding: 2rem;
+    border: 1px solid #616161;
+    border-radius: 100%;
+    width: 1px;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.good{
+    border: 1px solid #0a0a;
+}
+
+.medium{
+    border: 1px solid #d9ff00;
+}
+
+.bad{
+    border: 1px solid #ff0000;
+}
+
+.movie_details{
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #616161;
+    border-bottom: 2px solid #616161;
+    background-color: #232323;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.movie_tagline{
+    padding: 20px;
+}
+
+.movie_overview{
+    padding: 0 20px 20px 20px;
+}
+
+.play{
+    all: unset;
+    background-color: #e50914;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
