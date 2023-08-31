@@ -1,7 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -14,7 +12,8 @@ const firebaseConfig = {
   storageBucket: "betterflix-51246.appspot.com",
   messagingSenderId: "975285384080",
   appId: "1:975285384080:web:f8b746c45afe987252f915",
-  measurementId: "G-7EZEH0TN9V"
+  measurementId: "G-7EZEH0TN9V",
+  databaseURL: "https://betterflix-51246-default-rtdb.europe-west1.firebasedatabase.app"
 };
 
 // Initialize Firebase
