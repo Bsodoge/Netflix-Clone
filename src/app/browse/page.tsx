@@ -2,7 +2,6 @@
 
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
-import Header from "../components/Header"
 import CurrentMovie from "../components/CurrentMovie"
 import Carousel from "../components/Carousel"
 import { useState } from "react"
@@ -19,7 +18,6 @@ export default function Browse() {
     });
     return (
         <main>
-            <Header></Header>
             <CurrentMovie currentMovie={currentMovie!}></CurrentMovie>
             <div className="carousels_container">
                 <Carousel type="popular" setCurrentMovie={setCurrentMovie}></Carousel>
