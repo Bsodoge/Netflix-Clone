@@ -48,3 +48,23 @@
 .text_container {
     margin: 10px;
 }
+
+@media screen and (min-width: 950px) {
+    .card_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card::before{
+        position: unset;
+        transform: scale(20px);
+    }
+    .card{
+        background-image: radial-gradient(ellipse at top,#d00b1a 17%, #0e1b4e 79%, #080f2c 100%);
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
