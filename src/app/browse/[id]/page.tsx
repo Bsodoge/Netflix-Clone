@@ -12,7 +12,7 @@ interface props {
     params: { id: number }
 }
 
-export default function idPage({ params }: props) {
+export default function IdPage({ params }: props) {
     const route = useRouter();
     const { status } = useSession({
         required: true,
