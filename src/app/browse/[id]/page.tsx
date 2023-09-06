@@ -106,7 +106,7 @@ export default function IdPage({ params }: props) {
             </div>
             <div className={styles.movie_details}>
                 {new Date(movie!?.release_date).toLocaleString().slice(0,10)} &#x2022; {calculateTime(movie!?.runtime)}
-                <div>{movie!?.genres.map((genere, i, genres) => `${genere.name}${i + 1 !== genres.length ? ', ' : ''}`)}</div>
+                <div>{movie!?.genres.map((genre, i, genres) => `${genre.name}${i + 1 !== genres.length ? ', ' : ''}`)}</div>
             </div>
             <div className={styles.movie_tagline}><em>{movie!?.tagline}</em></div>
             <div className={styles.movie_overview}>
