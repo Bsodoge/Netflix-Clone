@@ -93,7 +93,7 @@ export default function Carousel({ type, setCurrentMovie }: props) {
                 </button>
                 <div className={styles.slider} ref={slider}>
                     {
-                        loading ? <></> : movies.map(movie => <CarouselMovie movieDetails={movie} setCurrentMovie={setCurrentMovie}/>)
+                        loading ? <></> : movies.map((movie, i) => <CarouselMovie key={i} movieDetails={movie} setCurrentMovie={setCurrentMovie}/>)
                     }
                 </div>
                 <button className={`${styles.handle} ${styles.right}`} onClick={() => handleMove('right')}>
