@@ -50,7 +50,7 @@ export default function MyList() {
             <h1>My List</h1>
             <div className={styles.movie_container}>
                 {
-                    movieList.map(movieID => <ListItem id={movieID}/>)
+                    movieList.map((movieID, id) => <ListItem key={id} id={movieID}/>)
                 }
             </div>
         </main>
