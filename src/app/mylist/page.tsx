@@ -2,13 +2,21 @@
 
 import { useEffect, useState } from "react"
 import styles from "./page.module.css"
-import { child, getDatabase, onValue, ref } from "firebase/database";
+import { getDatabase, onValue, ref } from "firebase/database";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "../firebase/firebase";
 import ListItem from "../components/ListItem";
-
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 export default function MyList() {
+    const route = useRouter();
+    const { status } = useSession({
+        required: true,
+        onUnauthenticated() {
+            route.push('/signin');
+        },
+    });
     let [userID, setUserID] = useState<string>('');
     let [movieList, setMovieList] = useState<Array<string>>([]);
 

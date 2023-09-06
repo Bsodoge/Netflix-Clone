@@ -6,12 +6,20 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase, onValue, push, ref, remove, set } from "firebase/database";
 import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
-
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 interface props {
     params: { id: number }
 }
 
 export default function idPage({ params }: props) {
+    const route = useRouter();
+    const { status } = useSession({
+        required: true,
+        onUnauthenticated() {
+            route.push('/signin');
+        },
+    });
     let [movie, setMovie] = useState<ISpecificMovieDetails>();
     let [userID, setUserID] = useState<string>('');
     let [favourite, setFavourite] = useState<boolean>(false);
@@ -19,7 +27,6 @@ export default function idPage({ params }: props) {
     const movieBackground = useRef<HTMLDivElement>(null);
     const auth = getAuth(app);
     const db = getDatabase(app);
-
     onAuthStateChanged(auth, user => {
         if (user) {
             setUserID(user.uid)
