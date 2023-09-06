@@ -4,8 +4,14 @@
     align-items: center;
     padding: 1rem;
 }
-.header > a {
+.header > a,
+.button_container a {
     text-decoration: none;
+}
+
+.button_container{
+    display: flex;
+    gap: 0.5rem;
 }
 
 .button {
@@ -13,7 +19,7 @@
     background-color: #e50914;
     border-radius: 5px;
     padding: 0.45rem 1rem;
-    color: #fff;
+    color: #fff;     
 }
 
 .button:hover{
